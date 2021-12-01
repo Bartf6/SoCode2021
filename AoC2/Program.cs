@@ -26,13 +26,18 @@ namespace AoC2
                     break;
                 }
 
-                SumA = DepthList[i] + DepthList[i + 1] + DepthList[i + 2];
-                SumB = DepthList[i + 1] + DepthList[i + 2] + DepthList[i + 3];
-
-                if (SumA < SumB)
+                if (DepthList[i] < DepthList[i+3])
                 {
                     Increases++;
                 }
+
+                //SumA = DepthList[i] + DepthList[i + 1] + DepthList[i + 2];
+                //SumB = DepthList[i + 1] + DepthList[i + 2] + DepthList[i + 3];
+
+                //if (SumA < SumB)
+                //{
+                //    Increases++;
+                //}
             }
 
             Console.WriteLine("Amount of Increases: {0}.", Increases);
