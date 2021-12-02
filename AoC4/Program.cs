@@ -14,17 +14,20 @@ namespace AoC4
             {
                 string s = line;
                 string[] subs = s.Split(' ');
-                switch (subs[0])
+                string Direction = subs[0];
+                int Amount = Int32.Parse(subs[1]);
+
+                switch (Direction)
                 {
                     case "forward":
-                        Horizontal = Horizontal + Int32.Parse(subs[1]);
-                        Depth = Depth + (Int32.Parse(subs[1]) * Aim);
+                        Horizontal = Horizontal + Amount;
+                        Depth = Depth + Amount;
                         break;
                     case "up":
-                        Aim = Aim - Int32.Parse(subs[1]);
+                        Aim = Aim - Amount;
                         break;
                     case "down":
-                        Aim = Aim + Int32.Parse(subs[1]);
+                        Aim = Aim + Amount;
                         break;
 
                     default:
