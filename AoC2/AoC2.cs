@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AoC2
 {
-    class Program
+    class AoC2
     {
         static void Main(string[] args)
         {

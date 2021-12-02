@@ -1,27 +1,35 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using AdventOfCodeLibraries;
 
 namespace AoC4
 {
-    class Program
+    class AoC4
     {
         static void Main(string[] args)
         {
+            Class1 input = new Class1();
+            List<string> StringList = new List<string>();
+            string newFilePath = Path.Combine(Environment.CurrentDirectory + @"\..\..\..\input.txt");
+
+            StringList = input.ConvertInputToStringList(newFilePath);
+
             int Depth = 0;
             int Horizontal = 0;
             int Aim = 0;
 
-            foreach (string line in System.IO.File.ReadLines(@"C:\Users\bfransen\source\repos\Advent of Code\AoC4\input.txt"))
+            foreach(string line in StringList)
             {
-                string s = line;
-                string[] subs = s.Split(' ');
+                string[] subs = line.Split(' ');
                 string Direction = subs[0];
                 int Amount = Int32.Parse(subs[1]);
 
-                switch (Direction)
+                switch(Direction)
                 {
                     case "forward":
                         Horizontal = Horizontal + Amount;
-                        Depth = Depth + Amount;
+                        Depth = Depth + (Amount * Aim);
                         break;
                     case "up":
                         Aim = Aim - Amount;

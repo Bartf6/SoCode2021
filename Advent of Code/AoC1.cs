@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Advent_of_Code
 {
-    class Program
+    class AoC1
     {
         static void Main(string[] args)
         {
