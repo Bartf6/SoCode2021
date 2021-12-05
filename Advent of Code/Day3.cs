@@ -1,27 +1,75 @@
-﻿using System;
+﻿using AdventOfCodeLibraries;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using AdventOfCodeLibraries;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace AoC6
+namespace Advent_of_Code
 {
-    class AoC6
+    class Day3
     {
-        private readonly int BinaryLength = 12;
-
-        static void Main(string[] args)
+        public void partOne()
         {
-            AoC6 test = new AoC6();
             Class1 adventLib = new Class1();
-            string newFilePath = Path.Combine(Environment.CurrentDirectory + @"\..\..\..\input.txt");
+            string newFilePath = Path.Combine(Environment.CurrentDirectory + @"\..\..\..\inputDag3.txt");
             List<string> BinaryList = adventLib.ConvertInputToStringList(newFilePath);
+            List<int> BinaryValues = new List<int>();
+            string result = string.Empty;
 
-            Console.WriteLine(test.recursiveOxygen(BinaryList,0,true));
-            Console.WriteLine(test.recursiveOxygen(BinaryList,0,false));
-            Console.ReadLine();
+            int BinaryLength = BinaryList[0].Length;
+
+            for(int i = 0; i < BinaryLength; i++)
+            {
+                int increase1 = 0;
+                int increase0 = 0;
+                foreach(string binaryLine in BinaryList)
+                {
+                    char[] arr = binaryLine.ToCharArray(0,BinaryLength);
+                    string temp = arr[i].ToString();
+                    if(Int32.Parse(temp) == 0)
+                    {
+                        increase0++;
+                    }
+                    else
+                    {
+                        increase1++;
+                    }
+                }
+                if(increase0 < increase1)
+                {
+                    BinaryValues.Add(1);
+                }
+                else
+                {
+                    BinaryValues.Add(0);
+                }
+            }
+
+            foreach(int value in BinaryValues)
+            {
+                result += value.ToString();
+            }
+
+            Console.WriteLine("Part one answer: " + result);
         }
 
-        public string recursiveOxygen(List<string> RecursiveList,int index, bool mostCommon=true)
+        public void partTwo()
+        {
+            Class1 adventLib = new Class1();
+            string newFilePath = Path.Combine(Environment.CurrentDirectory + @"\..\..\..\inputDag3.txt");
+            List<string> BinaryList = adventLib.ConvertInputToStringList(newFilePath);
+
+            string result1 = string.Empty;
+            string result2 = string.Empty;
+
+            result1 = recursiveOxygen(BinaryList,0,12,true);
+            result2 = recursiveOxygen(BinaryList,0,12,false);
+            Console.WriteLine("Part two answer: " + "Oxygen: " + result1 + " - CO2: " + result2);
+        }
+
+        public string recursiveOxygen(List<string> RecursiveList,int index,int BinaryLength,bool mostCommon = true)
         {
             List<string> OxygenGeneratorRating = new List<string>();
             if(mostCommon)
@@ -67,7 +115,7 @@ namespace AoC6
             int increase1 = 0;
             int increase0 = 0;
             int MostBinaryValues = 0;
-            foreach (string Rline in RecursiveList)
+            foreach(string Rline in RecursiveList)
             {
                 char[] arr = Rline.ToCharArray(0,BinaryLength);
                 string temp = arr[index].ToString();
@@ -92,7 +140,7 @@ namespace AoC6
                 {
                     MostBinaryValues = 0;
                 }
-                else if (increase0 == increase1)
+                else if(increase0 == increase1)
                 {
                     MostBinaryValues = 1;
                 }
@@ -107,7 +155,7 @@ namespace AoC6
                 {
                     MostBinaryValues = 1;
                 }
-                else if (increase0 == increase1)
+                else if(increase0 == increase1)
                 {
                     MostBinaryValues = 0;
                 }
@@ -124,7 +172,8 @@ namespace AoC6
                 }
             }
 
-            return recursiveOxygen(OxygenGeneratorRating,index + 1, mostCommon);
+            return recursiveOxygen(OxygenGeneratorRating,index + 1,BinaryLength,mostCommon);
         }
+
     }
 }
