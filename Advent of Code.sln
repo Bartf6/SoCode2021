@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Advent of Code", "Advent of Code\Advent of Code.csproj", "{00061B46-D1E9-406E-9B02-B546302B24FA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dag 1", "Dag 1", "{2E5BA222-8CC5-463C-8BF4-D9128076B359}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2021", "2021", "{2E5BA222-8CC5-463C-8BF4-D9128076B359}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{2136D34C-EDDD-4D99-8E9C-B4DC2F7012BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCodeLibraries", "AdventOfCodeLibraries\AdventOfCodeLibraries.csproj", "{9238C881-F11D-4443-B404-9AE06ED4C943}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2022", "2022", "{15CDB834-7A9A-440F-998D-A1C497770764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2022", "AdventOfCode2022\AdventOfCode2022.csproj", "{121CEF2A-17F3-4E3C-A562-6DBE8BDCF098}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{9238C881-F11D-4443-B404-9AE06ED4C943}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9238C881-F11D-4443-B404-9AE06ED4C943}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9238C881-F11D-4443-B404-9AE06ED4C943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121CEF2A-17F3-4E3C-A562-6DBE8BDCF098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121CEF2A-17F3-4E3C-A562-6DBE8BDCF098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121CEF2A-17F3-4E3C-A562-6DBE8BDCF098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121CEF2A-17F3-4E3C-A562-6DBE8BDCF098}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{00061B46-D1E9-406E-9B02-B546302B24FA} = {2E5BA222-8CC5-463C-8BF4-D9128076B359}
 		{9238C881-F11D-4443-B404-9AE06ED4C943} = {2136D34C-EDDD-4D99-8E9C-B4DC2F7012BA}
+		{121CEF2A-17F3-4E3C-A562-6DBE8BDCF098} = {15CDB834-7A9A-440F-998D-A1C497770764}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7E4A3AC-D4D2-4185-AD1F-BBDA5C09EF1D}
