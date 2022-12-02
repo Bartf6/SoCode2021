@@ -84,28 +84,31 @@ namespace AdventOfCode2022
         public void PartTwo()
         {
             Class1 adventLib = new();
-            List<string> FoodList = new List<string>();
+            List<string> RockPaperScissors = new List<string>();
             string newFilePath = Path.Combine(Environment.CurrentDirectory + @"\..\..\..\InputDag2.txt");
-            FoodList = adventLib.ConvertInputToStringList(newFilePath);
+            RockPaperScissors = adventLib.ConvertInputToStringList(newFilePath);
 
-            Console.WriteLine("Total: " + 2);
+
+            var puzzleTwo = RockPaperScissors.Select(x => x switch
+            {
+                "A X" => 3,
+                "A Y" => 4,
+                "A Z" => 8,
+                "B X" => 1,
+                "B Y" => 5,
+                "B Z" => 9,
+                "C X" => 2,
+                "C Y" => 6,
+                "C Z" => 7,
+            }).Sum();
+
+            Console.WriteLine("Total: " + puzzleTwo);
         }
     }
 }
 
 
-//var puzzleOne = input.Select(x => x switch
-//{
-//    "A X" => 4,
-//    "A Y" => 8,
-//    "A Z" => 3,
-//    "B X" => 1,
-//    "B Y" => 5,
-//    "B Z" => 9,
-//    "C X" => 7,
-//    "C Y" => 2,
-//    "C Z" => 6,
-//}).Sum();
+
 //var puzzleTwo = input.Select(x => x switch
 //{
 //    "A X" => 3,
