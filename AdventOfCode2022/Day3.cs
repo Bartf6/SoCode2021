@@ -31,7 +31,7 @@ namespace AdventOfCode2022
                 score = score + ItemPriority.IndexOf(common.First()) + 1;
             }
 
-            Console.WriteLine("Total: " + score);
+            Console.WriteLine("Answer: " + score);
         }
         public void PartTwo()
         {
@@ -56,7 +56,7 @@ namespace AdventOfCode2022
                 score = score + ItemPriority.IndexOf(result.First()) + 1;
             }
 
-            Console.WriteLine("Total: " + score);
+            Console.WriteLine("Answer: " + score);
         }
     }
 }

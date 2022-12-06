@@ -34,7 +34,7 @@ namespace AdventOfCode2022
                 }
             }
 
-            Console.WriteLine(highestFood);
+            Console.WriteLine("Answer: " + highestFood);
         }
 
         public void PartTwo()
@@ -65,7 +65,7 @@ namespace AdventOfCode2022
             int totalElfs = totalFood.Count;
             totalFood.Sort();
             int topThree = totalFood[totalElfs - 1] + totalFood[totalElfs - 2] + totalFood[totalElfs - 3];
-            Console.WriteLine("Total: " + topThree);
+            Console.WriteLine("Answer: " + topThree);
         }
     }
 }

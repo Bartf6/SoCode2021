@@ -28,7 +28,7 @@ namespace AdventOfCode2022
                 "C Z" => 6,
             }).Sum();
 
-            Console.WriteLine(" MyTotal: " + puzzleone);
+            Console.WriteLine("Answer: " + puzzleone);
         }
 
         public void PartTwo()
@@ -51,7 +51,7 @@ namespace AdventOfCode2022
                 "C Z" => 7,
             }).Sum();
 
-            Console.WriteLine("Total: " + puzzleTwo);
+            Console.WriteLine("Answer: " + puzzleTwo);
         }
     }
 }

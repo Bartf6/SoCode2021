@@ -39,7 +39,8 @@ namespace AdventOfCode2022
                 
             }
 
-            Console.WriteLine("Total: " + pairsCounter);
+            Console.WriteLine("Answer: " + pairsCounter);
+
         }
 
         public void PartTwo()
@@ -77,7 +78,7 @@ namespace AdventOfCode2022
             }
 
 
-            Console.WriteLine("Total: " + pairsCounter);
+            Console.WriteLine("Answer: " + pairsCounter);
         }
     }
 }
